@@ -11,7 +11,7 @@ data class RegistrationCode(
 
         @Id
         @GeneratedValue
-        val id: Long,
+        val id: Int,
 
         val code: String
 

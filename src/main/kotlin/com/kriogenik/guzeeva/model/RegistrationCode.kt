@@ -15,4 +15,6 @@ data class RegistrationCode(
 
         val code: String = ""
 
-)
+){
+        constructor(code: String): this(0, code)
+}

@@ -6,7 +6,6 @@ import javax.persistence.*
 @Table(name = "meeting_tables")
 data class MeetingTable(
         @Id
-        @GeneratedValue
         val id: Int = 0,
 
         @OneToOne(optional = true, fetch = FetchType.EAGER)

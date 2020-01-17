@@ -11,8 +11,8 @@ data class RegistrationCode(
 
         @Id
         @GeneratedValue
-        val id: Int,
+        val id: Int      = 0,
 
-        val code: String
+        val code: String = ""
 
 )

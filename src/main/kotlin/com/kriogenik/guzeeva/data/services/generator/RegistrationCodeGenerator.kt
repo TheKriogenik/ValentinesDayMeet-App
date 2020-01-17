@@ -1,6 +1,6 @@
 package com.kriogenik.guzeeva.data.services.generator
 
-interface RegisterCodeGenerator {
+interface RegistrationCodeGenerator {
 
     fun getCode(): String
 

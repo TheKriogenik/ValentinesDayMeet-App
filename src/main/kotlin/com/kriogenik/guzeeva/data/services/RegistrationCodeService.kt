@@ -7,6 +7,6 @@ interface RegistrationCodeService {
 
     fun getNewCode(): RegistrationCode
 
-    fun findCode(): Optional<RegistrationCode>
+    fun findCode(code: String): Optional<RegistrationCode>
 
 }

@@ -9,7 +9,7 @@ import com.petersamokhin.bots.sdk.objects.Message as VkMessage
 class ReceivedMessageFactoryDefaultImpl: ReceivedMessageFactory<VkMessage> {
 
     override fun createReceivedMessage(message: VkMessage): ReceivedMessage {
-        return ReceivedMessage(message.text, message.getMessageButtonPayload())
+        return ReceivedMessage(message.authorId(), message.text, message.getMessageButtonPayload())
     }
 
     private fun VkMessage.getMessageButtonPayload() = with(this.attachmentsOfReceivedMessage){

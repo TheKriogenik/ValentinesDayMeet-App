@@ -25,7 +25,8 @@ class ReceivedMessageFactoryTest {
             put("payload", "PAYLOAD")
         })
         Mockito.`when`(vkMessage.text).thenReturn("TEST_TEST")
-        val expected = ReceivedMessage("TEST_TEST", "PAYLOAD")
+        Mockito.`when`(vkMessage.authorId()).thenReturn(1)
+        val expected = ReceivedMessage(1,"TEST_TEST", "PAYLOAD")
         val actual = receivedMessageFactory.createReceivedMessage(vkMessage)
         assert(expected == actual)
     }

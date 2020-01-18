@@ -1,6 +1,6 @@
 package com.kriogenik.guzeeva.model
 
-enum class PersonState {
+enum class PersonEntityState: EntityState<Person> {
 
     ACTIVE,
 

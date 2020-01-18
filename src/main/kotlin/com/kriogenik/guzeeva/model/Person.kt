@@ -16,6 +16,6 @@ class Person(
         val bio: String  = "",
 
         @Enumerated(EnumType.STRING)
-        val state: PersonState = PersonState.NOT_CREATED
+        val state: PersonEntityState = PersonEntityState.NOT_CREATED
 
 )

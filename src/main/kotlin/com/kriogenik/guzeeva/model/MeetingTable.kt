@@ -12,7 +12,8 @@ data class MeetingTable(
         val person1: Person? = null,
 
         @OneToOne(optional = true, fetch = FetchType.EAGER)
-        val person2: Person? = null
-){
-    fun isAvailable() = person1 != null && person2 != null
-}
+        val person2: Person? = null,
+
+        @Enumerated(EnumType.STRING)
+        val state: TableEntityState = TableEntityState.NOT_USE
+)

@@ -8,7 +8,9 @@ data class Key(
 
     enum class Color{
         DEFAULT,
-        PRIMAL
+        PRIMARY,
+        NEGATIVE,
+        POSITIVE
     }
 
 }

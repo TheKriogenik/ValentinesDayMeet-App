@@ -4,7 +4,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "persons")
-class Person(
+data class Person(
 
         @Id
         val vkId: Long   = 0L,

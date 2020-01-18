@@ -22,7 +22,11 @@ class ResponseMessageFactoryDefaultImpl: ResponseMessageFactory<VkMessage> {
                     this.attachments(it)
                 }
             }
-            this.keyboard(responseMessage.keyboard.let(keyboardFactory::getKeyboard))
+            when(responseMessage.keyboard.rows.isEmpty()){
+                true -> {}
+                else -> this.keyboard(responseMessage.keyboard.let(keyboardFactory::getKeyboard))
+            }
+
         }
     }
 

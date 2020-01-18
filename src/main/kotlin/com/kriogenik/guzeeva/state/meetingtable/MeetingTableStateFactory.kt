@@ -6,6 +6,7 @@ import com.kriogenik.guzeeva.state.State
 import com.kriogenik.guzeeva.state.StateFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
+import java.util.*
 
 @Component
 class MeetingTableStateFactory: StateFactory<MeetingTable> {
@@ -19,7 +20,7 @@ class MeetingTableStateFactory: StateFactory<MeetingTable> {
     @Autowired
     private lateinit var meetingTableNotUseState: MeetingTableNotUseState
 
-    override fun getState(stateEnum: EntityState<MeetingTable>): State<MeetingTable> {
+    override fun getState(stateEnum: EntityState<MeetingTable>): Optional<State<MeetingTable>> {
         return when(stateEnum.toString()){
             "FREE" -> {
                 meetingTableFreeState
@@ -30,7 +31,9 @@ class MeetingTableStateFactory: StateFactory<MeetingTable> {
             "NOT_USE" -> {
                 meetingTableNotUseState
             }
-            else -> meetingTableNotUseState
+            else -> null
+        }.let{
+            Optional.ofNullable(it)
         }
     }
 

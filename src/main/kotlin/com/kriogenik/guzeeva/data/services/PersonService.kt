@@ -5,7 +5,9 @@ import java.util.*
 
 interface PersonService {
 
-    fun save(person: Person): Optional<Person>
+    fun create(person: Person): Optional<Person>
+
+    fun update(person: Person): Optional<Person>
 
     fun find(id: Long): Optional<Person>
 

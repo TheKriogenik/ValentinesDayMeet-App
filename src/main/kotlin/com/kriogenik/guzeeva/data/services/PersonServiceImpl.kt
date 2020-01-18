@@ -15,13 +15,19 @@ class PersonServiceImpl: PersonService {
 
     private final val log = LoggerFactory.getLogger(this::class.java)
 
-    override fun save(person: Person): Optional<Person> {
+    override fun create(person: Person): Optional<Person> {
         return try{
             repository.save(person).let{Optional.of(it)}
         } catch(e: Exception){
             log.error(e.message)
             Optional.empty()
         }
+    }
+
+    override fun update(person: Person): Optional<Person> {
+        return repository.findById(person.vkId).map{
+                    repository.save(person)
+                }
     }
 
     override fun find(id: Long): Optional<Person> {

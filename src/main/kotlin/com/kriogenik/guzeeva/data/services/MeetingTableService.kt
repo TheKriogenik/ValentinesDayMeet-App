@@ -5,7 +5,9 @@ import java.util.*
 
 interface MeetingTableService {
 
-    fun save(table: MeetingTable): Optional<MeetingTable>
+    fun create(table: MeetingTable): Optional<MeetingTable>
+
+    fun update(table: MeetingTable): Optional<MeetingTable>
 
     fun find(id: Int): Optional<MeetingTable>
 

@@ -15,12 +15,18 @@ class MeetingTableServiceImpl: MeetingTableService {
 
     private final val log = LoggerFactory.getLogger(this::class.java)
 
-    override fun save(table: MeetingTable): Optional<MeetingTable> {
+    override fun create(table: MeetingTable): Optional<MeetingTable> {
         return try{
             repository.save(table).let{Optional.of(it)}
         } catch(e: Exception){
             log.error(e.message)
             Optional.empty()
+        }
+    }
+
+    override fun update(table: MeetingTable): Optional<MeetingTable> {
+        return repository.findById(table.id).map{
+            repository.save(table)
         }
     }
 

@@ -20,20 +20,20 @@ class PersonServiceTest {
     private lateinit var personRepository: PersonRepository
 
     @Test
-    fun saveNonexistentPerson(){
+    fun createNonexistentPerson(){
         val nonexistentPerson = Person(0L)
         Mockito.`when`(personRepository.save(nonexistentPerson))
                 .thenReturn(nonexistentPerson)
-        assert(personService.save(nonexistentPerson) == Optional.of(nonexistentPerson))
+        assert(personService.create(nonexistentPerson) == Optional.of(nonexistentPerson))
     }
 
     @Test
     @Throws(ConstraintViolationException::class)
-    fun saveExistentPerson(){
+    fun createExistentPerson(){
         val existentPerson = Person(0L)
         Mockito.`when`(personRepository.save(existentPerson))
                 .thenThrow(ConstraintViolationException::class.java)
-        assert(personService.save(existentPerson) == Optional.empty<Person>())
+        assert(personService.create(existentPerson) == Optional.empty<Person>())
     }
 
     @Test
@@ -50,6 +50,27 @@ class PersonServiceTest {
         Mockito.`when`(personRepository.findById(nonExistentPerson.vkId))
                 .thenReturn(Optional.empty())
         assert(personService.find(nonExistentPerson.vkId) == Optional.empty<Person>())
+    }
+
+    @Test
+    fun updateExistentPerson(){
+        val existentPerson = Person(0L)
+        val updatedPerson = Person(0L, "Test")
+        Mockito.`when`(personRepository.findById(existentPerson.vkId))
+                .thenReturn(Optional.of(existentPerson))
+        Mockito.`when`(personRepository.save(updatedPerson))
+                .thenReturn(updatedPerson)
+        assert(personService.update(updatedPerson) == Optional.of(updatedPerson))
+    }
+
+    @Test
+    fun updateNonexistentPerson(){
+        val updatedPerson = Person(0L, "Test")
+        Mockito.`when`(personRepository.findById(updatedPerson.vkId))
+                .thenReturn(Optional.empty())
+        Mockito.`when`(personRepository.save(updatedPerson))
+                .thenReturn(updatedPerson)
+        assert(personService.update(updatedPerson) == Optional.empty<Person>())
     }
 
 }

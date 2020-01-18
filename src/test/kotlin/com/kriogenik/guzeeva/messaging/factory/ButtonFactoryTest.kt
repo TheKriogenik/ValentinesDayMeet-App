@@ -14,10 +14,10 @@ import org.springframework.boot.test.mock.mockito.MockBean
 class ButtonFactoryTest {
 
     @Autowired
-    private lateinit var buttonFactory: ButtonFactory
+    private lateinit var buttonFactory: ButtonFactory<Button>
 
     @MockBean
-    private lateinit var colorFactory: ColorFactory
+    private lateinit var colorFactory: ColorFactory<Color>
 
     @Test
     fun createButtonExample(){

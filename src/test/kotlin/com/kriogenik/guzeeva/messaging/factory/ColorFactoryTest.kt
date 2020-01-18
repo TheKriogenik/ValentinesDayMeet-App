@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest
 class ColorFactoryTest {
 
     @Autowired
-    private lateinit var colorFactory: ColorFactory
+    private lateinit var colorFactory: ColorFactory<Color>
 
     @Test
     fun allColorsAvailable(){

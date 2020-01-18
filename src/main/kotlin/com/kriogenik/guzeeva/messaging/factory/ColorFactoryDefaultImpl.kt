@@ -5,7 +5,7 @@ import com.petersamokhin.bots.sdk.objects.Color
 import org.springframework.stereotype.Component
 
 @Component
-class ColorFactoryDefaultImpl: ColorFactory {
+class ColorFactoryDefaultImpl: ColorFactory<Color> {
 
     override fun getColor(color: Key.Color): Color {
         return when(color){

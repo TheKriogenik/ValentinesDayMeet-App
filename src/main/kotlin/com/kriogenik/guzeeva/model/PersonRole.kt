@@ -8,7 +8,9 @@ data class PersonRole(
         @Id
         val personId: Int,
         @Enumerated(EnumType.STRING)
-        val role    : Role
+        val role    : Role,
+        @Column(updatable = true)
+        val activated: Boolean = false
 ){
     enum class Role {
 

@@ -10,6 +10,12 @@ enum class PersonEntityState: EntityState<Person> {
 
     TALKING,
 
-    NOT_CREATED
+    NOT_CREATED,
+
+    ENTERING_REGISTRATION_CODE,
+
+    CHANGING_NAME,
+
+    CHANGING_BIO
 
 }

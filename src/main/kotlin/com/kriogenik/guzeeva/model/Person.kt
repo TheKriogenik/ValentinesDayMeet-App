@@ -7,7 +7,7 @@ import javax.persistence.*
 data class Person(
 
         @Id
-        val vkId: Long   = 0L,
+        val vkId: Int    = 0,
 
         val name: String = "",
 

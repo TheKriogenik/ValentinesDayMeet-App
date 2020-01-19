@@ -1,9 +1,9 @@
 package com.kriogenik.guzeeva.model
 
-import javax.persistence.EnumType
-import javax.persistence.Enumerated
-import javax.persistence.Id
+import javax.persistence.*
 
+@Entity
+@Table(name = "person_role")
 data class PersonRole(
         @Id
         val personId: Int,

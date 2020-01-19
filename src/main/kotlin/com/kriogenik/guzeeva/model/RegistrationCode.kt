@@ -11,9 +11,9 @@ data class RegistrationCode(
         val id: Int      = 0,
 
         val code: String = "",
-        
+
         @Column(updatable = true)
-        val activated: Boolean = false
+        val isActivated: Boolean = false
 
 ){
         constructor(code: String): this(0, code)

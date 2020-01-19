@@ -9,4 +9,6 @@ interface RegistrationCodeService {
 
     fun findCode(code: String): Optional<RegistrationCode>
 
+    fun activateCode(code: String): Optional<RegistrationCode>
+
 }

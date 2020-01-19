@@ -69,4 +69,33 @@ class RegistrationCodeServiceTest {
         assert(registrationCodeService.getNewCode() == newRegistrationCode)
     }
 
+    @Test
+    fun activateNonExistenceRegistrationCode(){
+        val regCode = RegistrationCode(1, "ABCD")
+        Mockito.`when`(registrationCodeRepository.findByCode(regCode.code))
+                .thenReturn(Optional.empty())
+        assert(registrationCodeService.activateCode(regCode.code).isEmpty)
+    }
+
+    @Test
+    fun activateExistenceNotActivatedRegistrationCode(){
+        val regCode = RegistrationCode("ABCD")
+        val updated = regCode.copy(isActivated = true)
+        Mockito.`when`(registrationCodeRepository.findByCode(regCode.code))
+                .thenReturn(Optional.of(regCode))
+        Mockito.`when`(registrationCodeRepository.save(updated))
+                .thenReturn(updated)
+        assert(registrationCodeService.activateCode(regCode.code).map{
+            it == updated
+        }.orElse(false))
+    }
+
+    @Test
+    fun activateExistenceActivatedRegistrationCode(){
+        val regCode = RegistrationCode(code = "ABCD", isActivated = true)
+        Mockito.`when`(registrationCodeRepository.findByCode(regCode.code))
+                .thenReturn(Optional.of(regCode))
+        assert(registrationCodeService.activateCode(regCode.code).isEmpty)
+    }
+
 }

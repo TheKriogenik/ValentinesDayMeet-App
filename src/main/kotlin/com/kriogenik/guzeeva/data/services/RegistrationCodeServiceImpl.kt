@@ -31,4 +31,10 @@ class RegistrationCodeServiceImpl: RegistrationCodeService {
         return repository.findByCode(code)
     }
 
+    override fun activateCode(code: String): Optional<RegistrationCode> {
+        return repository.findByCode(code).map{
+            it.copy(isActivated = true).let(repository::save)
+        }
+    }
+
 }

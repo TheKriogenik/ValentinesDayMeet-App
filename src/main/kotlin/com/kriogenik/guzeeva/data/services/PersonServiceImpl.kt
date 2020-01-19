@@ -30,7 +30,7 @@ class PersonServiceImpl: PersonService {
                 }
     }
 
-    override fun find(id: Long): Optional<Person> {
+    override fun find(id: Int): Optional<Person> {
         return repository.findById(id)
     }
 

@@ -9,7 +9,7 @@ interface PersonService {
 
     fun update(person: Person): Optional<Person>
 
-    fun find(id: Long): Optional<Person>
+    fun find(id: Int): Optional<Person>
 
     fun delete(person: Person)
 

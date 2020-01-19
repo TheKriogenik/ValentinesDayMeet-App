@@ -19,6 +19,7 @@ class KeyboardFactoryDefaultImpl: KeyboardFactory<VkKeyboard> {
                     addButtons(i, buttonFactory.createButton(key))
                 }
             }
+            setOneTime(true)
         }
     }
 

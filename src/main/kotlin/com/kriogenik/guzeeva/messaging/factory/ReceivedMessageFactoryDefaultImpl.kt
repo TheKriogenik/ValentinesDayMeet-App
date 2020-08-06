@@ -1,7 +1,6 @@
 package com.kriogenik.guzeeva.messaging.factory
 
 import com.kriogenik.guzeeva.handlers.PersonActionFactory
-import com.kriogenik.guzeeva.messaging.model.Payload
 import com.kriogenik.guzeeva.messaging.model.ReceivedMessage
 import org.json.JSONObject
 import org.springframework.beans.factory.annotation.Autowired
@@ -20,6 +19,5 @@ class ReceivedMessageFactoryDefaultImpl: ReceivedMessageFactory<VkMessage> {
     override fun createReceivedMessage(message: VkMessage): ReceivedMessage {
         return ReceivedMessage(message.authorId(), message.text, payloadFactory.getPayload(message))
     }
-
 
 }

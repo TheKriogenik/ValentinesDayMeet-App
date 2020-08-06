@@ -15,7 +15,7 @@ class PersonStateFactory: StateFactory<Person> {
     private lateinit var states: List<State<Person>>
 
     override fun getState(stateEnum: EntityState<Person>): Optional<State<Person>> {
-        return states.find{stateEnum.toString() == it.toString()}?.let{
+        return states.find{stateEnum == it.state}?.let{
             Optional.of(it)
         } ?: Optional.empty()
     }

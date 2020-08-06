@@ -1,6 +1,7 @@
 package com.kriogenik.guzeeva.state.meetingtable
 
 import com.kriogenik.guzeeva.data.services.MeetingTableService
+import com.kriogenik.guzeeva.model.EntityState
 import com.kriogenik.guzeeva.model.MeetingTable
 import com.kriogenik.guzeeva.model.TableEntityState
 import com.kriogenik.guzeeva.state.State
@@ -11,6 +12,8 @@ import java.util.*
 
 @Component
 class MeetingTableFreeState: State<MeetingTable> {
+
+    override val state: EntityState<MeetingTable> = TableEntityState.FREE
 
     @Autowired
     private lateinit var service: MeetingTableService

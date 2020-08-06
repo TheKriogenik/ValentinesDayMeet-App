@@ -20,6 +20,14 @@ data class Person(
 
         @Enumerated(EnumType.STRING)
         @Column(updatable = true)
-        val state: PersonEntityState = PersonEntityState.NOT_CREATED
+        val state: PersonEntityState = PersonEntityState.NOT_CREATED,
+
+        @Enumerated(EnumType.STRING)
+        @Column(updatable = true)
+        val sex: Sex = Sex.MALE,
+
+        @Enumerated(EnumType.STRING)
+        @Column(updatable = true)
+        val preference: Preference = Preference.NOT_SELECTED
 
 )

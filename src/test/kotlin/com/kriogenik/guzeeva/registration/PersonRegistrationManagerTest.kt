@@ -24,7 +24,7 @@ class PersonRegistrationManagerTest {
         val nonexistenceCode = "ABCD"
         Mockito.`when`(regCodeService.findCode(nonexistenceCode))
                 .thenReturn(Optional.empty())
-        assert(!personRegistrationManager.register(nonexistenceCode))
+        assert(personRegistrationManager.register(nonexistenceCode).isPresent)
     }
 
     @Test
@@ -32,7 +32,7 @@ class PersonRegistrationManagerTest {
         val existenceCode = RegistrationCode(code = "ABCD", isActivated = true)
         Mockito.`when`(regCodeService.findCode(existenceCode.code))
                 .thenReturn(Optional.of(existenceCode))
-        assert(!personRegistrationManager.register(existenceCode.code))
+        assert(personRegistrationManager.register(existenceCode.code).isPresent)
     }
 
     @Test
@@ -43,7 +43,7 @@ class PersonRegistrationManagerTest {
                 .thenReturn(Optional.of(existenceCode))
         Mockito.`when`(regCodeService.activateCode(existenceCode.code))
                 .thenReturn(Optional.of(result))
-        assert(personRegistrationManager.register(existenceCode.code))
+        assert(personRegistrationManager.register(existenceCode.code).isEmpty)
     }
 
 }

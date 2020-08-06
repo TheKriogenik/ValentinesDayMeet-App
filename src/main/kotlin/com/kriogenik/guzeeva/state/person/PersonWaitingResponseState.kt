@@ -1,6 +1,7 @@
 package com.kriogenik.guzeeva.state.person
 
 import com.kriogenik.guzeeva.data.services.PersonService
+import com.kriogenik.guzeeva.model.EntityState
 import com.kriogenik.guzeeva.model.Person
 import com.kriogenik.guzeeva.model.PersonEntityState
 import com.kriogenik.guzeeva.state.State
@@ -11,6 +12,9 @@ import java.util.*
 
 @Component
 class PersonWaitingResponseState: State<Person> {
+
+    override val state: EntityState<Person> = PersonEntityState.WAITING_RESPONSE
+
     @Autowired
     private lateinit var service: PersonService
 

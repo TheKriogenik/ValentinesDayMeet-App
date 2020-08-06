@@ -2,6 +2,7 @@ package com.kriogenik.guzeeva.data.services
 
 import com.kriogenik.guzeeva.data.repositories.MeetingTableRepository
 import com.kriogenik.guzeeva.model.MeetingTable
+import com.kriogenik.guzeeva.model.TableEntityState
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -32,6 +33,14 @@ class MeetingTableServiceImpl: MeetingTableService {
 
     override fun find(id: Int): Optional<MeetingTable> {
         return repository.findById(id)
+    }
+
+    override fun getFreeTables(): List<MeetingTable> {
+        return repository.getByState(TableEntityState.FREE)
+    }
+
+    override fun getAll(): List<MeetingTable> {
+        return repository.findAll().toList()
     }
 
     override fun delete(table: MeetingTable) {

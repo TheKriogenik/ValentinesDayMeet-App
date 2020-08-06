@@ -11,6 +11,10 @@ interface MeetingTableService {
 
     fun find(id: Int): Optional<MeetingTable>
 
+    fun getFreeTables(): List<MeetingTable>
+
+    fun getAll(): List<MeetingTable>
+
     fun delete(table: MeetingTable)
 
 }

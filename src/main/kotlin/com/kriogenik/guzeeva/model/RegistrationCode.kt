@@ -13,7 +13,9 @@ data class RegistrationCode(
         val code: String = "",
 
         @Column(updatable = true)
-        val isActivated: Boolean = false
+        val isActivated: Boolean = false,
+
+        val role: PersonRole.Role = PersonRole.Role.USER
 
 ){
         constructor(code: String): this(0, code)

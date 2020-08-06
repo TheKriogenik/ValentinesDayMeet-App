@@ -18,8 +18,8 @@ class ResponseMessageFactoryDefaultImpl: ResponseMessageFactory<VkMessage> {
             this.to(responseMessage.userVkId)
             when(responseMessage.attachments.isEmpty()){
                 true -> {}
-                else -> responseMessage.attachments.foldRight(""){acc, x -> "$acc.$x" }.let{
-                    this.attachments(it)
+                else -> responseMessage.attachments.forEach{
+                    this.photo(it)
                 }
             }
             when(responseMessage.keyboard.rows.isEmpty()){

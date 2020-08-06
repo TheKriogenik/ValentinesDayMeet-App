@@ -1,6 +1,7 @@
 package com.kriogenik.guzeeva.state.person
 
 import com.kriogenik.guzeeva.data.services.PersonService
+import com.kriogenik.guzeeva.model.EntityState
 import com.kriogenik.guzeeva.model.Person
 import com.kriogenik.guzeeva.model.PersonEntityState
 import com.kriogenik.guzeeva.state.State
@@ -13,6 +14,8 @@ import java.util.*
 class PersonActiveState: State<Person> {
     @Autowired
     private lateinit var service: PersonService
+
+    override val state: EntityState<Person> = PersonEntityState.ACTIVE
 
     private final val log = LoggerFactory.getLogger(this::class.java)
 

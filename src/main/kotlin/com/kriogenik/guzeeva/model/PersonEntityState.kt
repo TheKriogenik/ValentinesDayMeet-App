@@ -4,6 +4,8 @@ enum class PersonEntityState: EntityState<Person> {
 
     ACTIVE,
 
+    ACTIVE_ADMIN,
+
     WAITING_RESPONSE,
 
     ANSWER_REQUEST,
@@ -16,6 +18,20 @@ enum class PersonEntityState: EntityState<Person> {
 
     CHANGING_NAME,
 
-    CHANGING_BIO
+    CHANGING_BIO,
+
+    CHANGING_SEX,
+
+    CHANGING_AGE,
+
+    ENTERING_CLOSE_TABLE_CODE,
+
+    ENTERING_FREE_TABLE_CODE,
+
+    ENTERING_NEW_TABLE_CODE,
+
+    CHANGING_PREFERENCE,
+
+    NOT_ACTIVE
 
 }

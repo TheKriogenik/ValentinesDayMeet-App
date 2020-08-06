@@ -1,0 +1,133 @@
+{
+  "REGISTRATION_HELLO_MESSAGE"               : "Сообщение о регистрации",
+
+  "REGISTRATION_ERROR_INVALID_CODE"          : "Введен неверный код",
+  "REGISTRATION_ERROR_CODE_ALREADY_USED"     : "Введенный код уже использован",
+  "REGISTRATION_SUCCESS_ENTER_CODE"          : "Успешно введен код",
+
+  "REGISTRATION_ENTER_YOUR_NAME"             : "Введите ваше имя",
+  "REGISTRATION_ERROR_NUMBERS_IN_NAME"       : "В имени не должны присутствовать цифры",
+  "REGISTRATION_ERROR_NAME_IS_TOO_LONG"      : "Имя слишком длинное - укажите более краткий вариант",
+  "REGISTRATION_ERROR_NAME_IS_TOO_SHORT"     : "Имя слишком короткое - укажите вариант длиннее",
+  "REGISTRATION_SUCCESS_ENTER_NAME"          : "Имя успешно установлено",
+
+  "REGISTRATION_ENTER_YOUR_AGE"              : "Введите ваш возраст",
+  "REGISTRATION_ERROR_AGE_IS_TOO_YOUNG"      : "Слишком малый возраст",
+  "REGISTRATION_ERROR_AGE_IS_TOO_OLD"        : "Слишком большой возраст",
+  "REGISTRATION_ERROR_LETTERS_IN_AGE"        : "В возрасте не должны присутствовать буквы",
+  "REGISTRATION_SUCCESS_ENTER_AGE"           : "Возраст успешно установлен",
+
+  "REGISTRATION_ENTER_YOUR_SEX"              : "Укажите ваш пол",
+  "REGISTRATION_SUCCESS_ENTER_SEX"           : "Пол успешно указан",
+
+  "REGISTRATION_ENTER_YOUR_PREFERENCES"      : "Укажите предпочитаемый для поиска пол",
+
+  "REGISTRATION_ENTER_YOU_BIO"               : "Введите информацию о себе",
+  "REGISTRATION_ERROR_BIO_IS_EMPTY"          : "Укажите информацию о себе",
+  "REGISTRATION_ERROR_BIO_IS_TOO_LONG"       : "Информация о себе слишком коротка",
+  "REGISTRATION_ERROR_BIO_IS_TOO_SHORT"      : "Информация о себе слишком длинна",
+  "REGISTRATION_SUCCESS_ENTER_BIO"           : "Информация о себе успешно указана",
+
+  "REGISTRATION_COMPLETED"                   : "Регистрация завершена",
+
+  "USER_TO_MENU_BUTTON"                      : "Главное меню",
+
+  "USER_MAIN_MENU"                           : "Главное меню",
+  "USER_SEARCH_BUTTON"                       : "Поиск",
+  "USER_SHOW_BIO_BUTTON"                     : "Моя анкета",
+  "USER_SHOW_HELP_BUTTON"                    : "Помощь",
+  "USER_EXIT_BUTTON"                         : "Выход",
+
+  "USER_HELP"                                : "Текст сообщения помощи по работе с ботом.",
+
+  "USER_RETURN_BUTTON"                       : "Вернуться",
+
+  "USER_EXIT_SUCCESS"                        : "Вы успешно отключились от системы",
+
+  "NEXT_PROFILE_BUTTON_TEXT"                 : "Следующая анкета",
+
+  "PROFILE_TITLE"                            : "Ваша анкета!",
+  "PROFILE_NAME"                             : "Имя",
+  "PROFILE_AGE"                              : "Возраст",
+  "PROFILE_SEX"                              : "Пол",
+  "PROFILE_PREFERENCE"                       : "Предпочитаемый пол",
+  "PROFILE_BIO"                              : "О себе",
+
+  "USER_REQUEST_SEND_SUCCESS"                : "Запрос отправлен",
+
+  "USER_REQUEST_CANCELED_TARGET"             : "Запрос был отменен",
+  "USER_REQUEST_CANCELED_INITIAL"            : "Запрос отменен",
+
+  "USER_STOP_TALKING_BUTTON"                 : "Закончить общение",
+  "USER_STOP_TALKING_INITIAL"                : "Беседа закончена",
+  "USER_STOP_TALKING_TARGET"                 : "Ваш собеседник закончил беседу",
+  "USER_TIME_IS_OVER"                        : "Время беседы завершено",
+
+  "ADMIN_SUCCESS_REGISTRATION"               : "Вход выполнен",
+  "ADMIN_MAIN_MENU"                          : "Меню",
+  "ADMIN_TO_MENU_BUTTON"                     : "В меню",
+  "ADMIN_TO_TABLES_MENU_BUTTON"              : "Показать столы",
+  "ADMIN_GET_KEY_BUTTON"                     : "Получить код",
+  "ADMIN_NEW_USER_CODE"                      : "Новый код пользователя: ",
+
+  "ADMIN_MENU_FREE_TABLE_BUTTON"             : "Освободить стол",
+  "ADMIN_MENU_ADD_TABLE_BUTTON"              : "Добавить стол",
+  "ADMIN_ERROR_TABLE_REMOVING"               : "Стол не удалось удалить",
+  "ERROR_TABLE_ALREADY_FREED"                : "Стол уже свободен!",
+
+  "ADMIN_NO_TABLES"                          : "Нет столов",
+
+  "ADMIN_ENTER_TABLE_CODE"                   : "Введите номер стола",
+
+  "ADMIN_ERROR_TABLE_ALREADY_EXIST"          : "Стол с таким номером уже существует!",
+  "ADMIN_SUCCESS_TABLE_ADDED"                : "Стол успешно добавлен",
+  "ADMIN_SUCCESS_TABLE_FREED"                : "Стол успешно свобожден",
+
+  "TABLE_TIME_IS_OVER"                       : "Ваше время закончилось",
+
+  "HANDLER_NOT_FOUND"                        : "Нужный обработчик не найден",
+  "ERROR_MESSAGE"                            : "Произошла ошибка",
+
+  "PREFERENCE_MALE"                          : "Мужской",
+  "PREFERENCE_FEMALE"                        : "Женский",
+  "PREFERENCE_BOTH"                          : "Любой",
+  "PREFERENCE_NOT_SELECTED"                  : "Не указано",
+
+  "SEX_MALE"                                 : "Мужской",
+  "SEX_FEMALE"                               : "Женский",
+  "SEX_NOT_SELECTED"                         : "Не указано",
+
+  "USER_CHANGE_NAME_BUTTON"                  : "Изменить имя",
+  "USER_CHANGE_AGE_BUTTON"                   : "Изменить возраст",
+  "USER_CHANGE_BIO_BUTTON"                   : "Изменить информацию о себе",
+  "USER_CHANGE_SEX_BUTTON"                   : "Сменить пол",
+  "USER_CHANGE_PREFERENCE_BUTTON"            : "Сменить предпочтения",
+
+  "NEW_REQUEST_TITLE"                        : "У вас новое приглашение!",
+  "NEW_REQUEST_ACCEPT_BUTTON"                : "Согласиться",
+  "NEW_REQUEST_DECLINE_BUTTON"               : "Откзааться",
+
+  "USER_SEARCH_NEXT_BUTTON"                  : "Искать дальше",
+
+  "USER_CANCEL_REQUEST"                      : "Отменить запрос",
+
+  "USER_WAITING_RESPONSE"                    : "Этот человек ждет ответа на запрос от другого пользователя",
+  "USER_ANSWERING_REQUEST"                   : "Этот человек сейчас отвечает на запрос от другого пользователя",
+  "USER_SEARCH_NEW_CANDIDATE"                : "Найдена новая анкета!",
+
+  "ANSWER_REQUEST_CONFIRM_INITIAL"           : "На ваше предложение согласились!\nПройдите за стол №",
+  "ANSWER_REQUEST_CONFIRM_TARGET"            : "Приглашение принято!\nПройдите за стол №",
+
+  "ANSWER_REQUEST_DECLINE_INITIAL"           : "На ваше предложение ответили отказом!",
+  "ANSWER_REQUEST_DECLINE_TARGET"            : "Предложение отвергнуто!",
+
+  "ANSWER_NO_FREE_TABLES"                    : "Отсутствуют свободные столы!\nПопробуйте найти позже",
+
+  "USER_SEND_REQUEST_BUTTON"                 : "Встретиться",
+  "USER_SEARCH_NO_CANDIDATES"                : "Не найдено подходящих кандидатов. Попробуйте поиск позже",
+
+  "REGISTRATION_SUCCESS_SELECTED_PREFERENCE" : "Предпочитаемый пол указан",
+
+  "BACK_TO_SYSTEM_SUCCESS"                   : "Вы успешно вернулись в систему!",
+  "BACK_TO_SYSTEM_ERROR"                     : "Произошла ошибка. Попробуйте позже."
+}

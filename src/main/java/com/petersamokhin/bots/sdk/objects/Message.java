@@ -768,6 +768,7 @@ public class Message implements Serializable {
             params.put("message", text);
             if (title != null && title.length() > 0) params.put("title", title);
             if (randomId != null && randomId > 0) params.put("random_id", randomId);
+            params.put("lang", 0);
             params.put("peer_id", peerId);
             if (attachments.size() > 0) params.put("attachment", String.join(",", attachments));
             if (forwardedMessages.size() > 0) params.put("forward_messages", String.join(",", forwardedMessages));
